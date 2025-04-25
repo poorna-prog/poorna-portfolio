@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Responsive Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+   <!-- Google Translate -->
+   <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ta,hi,kn,ml,te,ko',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+   <!-- Bootstrap JS (for navbar toggling) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <style>
+    /* ABOUT ME IMAGE */
+    .about-pic {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    /* CARD STYLES */
+    .card {
+      border-radius: 1rem;
+      border: 0.1rem solid plum;
+      background-color: white;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(221, 160, 221, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 300px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    .card h3, .card p {
+      margin: 0.5rem 0;
+    }
+
+    /* GRID LAYOUT */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .row .card {
+      flex: 1 1 calc(33.33% - 1rem);
+      margin: 0.5rem;
+      max-width: calc(33.33% - 1rem);
+    }
+
+    @media (max-width: 992px) {
+      .row .card {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .row .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .card {
+        padding: 1rem;
+      }
+    }
+
+    .paragraph-container {
+      text-align: justify;
+      padding: 0 1rem;
+    }
+
+    /* ARROWS */
+    .arrow-container-2 {
+      position: relative;
+      margin-top: 1rem;
+      margin-right: 8%;
+    }
+
+    .arrow-container-2 img,
+    .arrow-container-3 img {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .arrow-container-2 img,
+      .arrow-container-3 img {
+        left: 90%;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #f3e5f5;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#" style="color: #7b3c95;">Poorna Chandra</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(50%) sepia(21%) saturate(1439%) hue-rotate(275deg);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav gap-3">
+          <a class="nav-link" href="index.html" style="color: #914684;">Home</a>
+          <a class="nav-link" href="about.html" style="color: #914684;">About</a>
+          <a class="nav-link" href="experience.html" style="color: #914684;">Experience</a>
+          <a class="nav-link" href="projects.html" style="color: #914684;">Projects</a>
+          <a class="nav-link" href="contact.html" style="color: #914684;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+      <div id="google_translate_element"></div>
+      
+  <section class="container py-5">
+    <div class="text-center">
+      <img src="professional image.jpg" alt="About Me" class="about-pic">
+      <h2 class="mb-4">About Me</h2>
+      <div class="paragraph-container">
+        <p>Hello! I'm Poorna Chandra, a Frontend Developer passionate about crafting interactive and visually engaging user experiences. I specialize in HTML, CSS, JavaScript, and React.</p>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="card">
+        <img src="code-icon.png" alt="Coding">
+        <h3>Web Development</h3>
+        <p>Building modern and responsive websites using HTML, CSS, Bootstrap, and JavaScript.</p>
+      </div>
+      <div class="card">
+        <img src="responsive-icon.png" alt="Responsive Design">
+        <h3>Responsive Design</h3>
+        <p>Designs that work perfectly on desktops, tablets, and smartphones.</p>
+      </div>
+      <div class="card">
+        <img src="tools-icon.png" alt="Tools">
+        <h3>Tech Tools</h3>
+        <p>Experience with Git, GitHub, VS Code, and integrating with REST APIs.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="arrow-container-2">
+    <img src="./arrow.png" alt="Scroll Down" onclick="location.href = 'experience.html'">
+  </div>
+
+   <!-- Footer -->
+   <footer style="background-color: #e1bee7; color: #4a235a; text-align: center; padding: 1rem 0; margin-top: 3rem;">
+    <p>&copy; 2025 Poorna Chandra M. All rights reserved.</p>
+  </footer>
+</body>
+</html>

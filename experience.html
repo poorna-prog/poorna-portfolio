@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experience Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- AOS Animation CSS -->
+  <!-- Bootstrap JS (for navbar toggling) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'ta,hi,kn,ml,te,ko',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <style>
+    /* EXPERIENCE SECTION STYLES */
+    .experience-details-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      text-align: initial;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(197, 24, 174, 0.2);
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      margin-bottom: 20px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .arrow-container-2 {
+      position: relative;
+      margin-top: 10rem;
+      margin-left: 100%;
+    }
+
+    .arrow-icon {
+      width: 40px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .arrow-icon:hover {
+      transform: translateY(5px);
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .experience-card {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+   
+    /* RESPONSIVENESS */
+    @media (max-width: 768px) {
+      .experience-details-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f3e5f5;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color: #a64ca6; font-weight: bold;">Poorna Chandra</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(50%) sepia(21%) saturate(1439%) hue-rotate(275deg);"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" style="color: #914684;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html" style="color: #914684;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="experience.html" style="color: #914684;">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html" style="color: #914684;">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html" style="color: #914684;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div id="google_translate_element"></div>
+
+
+  <section id="experience" class="py-5">
+    <p class="section__text__p1 text-center"><em>Explore My</em></p>
+    <h1 class="title text-center">Experience</h1>
+
+    <div class="container">
+      <div class="row justify-content-center experience-details-container">
+
+        <!-- Frontend Development Card -->
+        <div class="col-md-5" data-aos="fade-up">
+          <div class="card experience-card">
+            <div class="card-body">
+              <h3 class="mb-3 text-center">Frontend Development</h3>
+              <div class="row">
+                <div class="col">
+                  <ul class="list-unstyled">
+                    <li class="d-flex align-items-center mb-2">
+                      <img src="checkmark.png" alt="icon" class="icon me-2" />
+                      <div>
+                        <h5 class="mb-0">HTML</h5>
+                        <small>Experienced</small>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-2">
+                      <img src="checkmark.png" alt="icon" class="icon me-2" />
+                      <div>
+                        <h5 class="mb-0">CSS</h5>
+                        <small>Experienced</small>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul class="list-unstyled">
+                    <li class="d-flex align-items-center mb-2">
+                      <img src="checkmark.png" alt="icon" class="icon me-2" />
+                      <div>
+                        <h5 class="mb-0">JavaScript</h5>
+                        <small>Intermediate</small>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-2">
+                      <img src="checkmark.png" alt="icon" class="icon me-2" />
+                      <div>
+                        <h5 class="mb-0">React</h5>
+                        <small>Intermediate</small>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Development Card -->
+        <div class="col-md-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="card experience-card">
+            <div class="card-body">
+              <h3 class="mb-3 text-center">Backend Development</h3>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3">
+                  <img src="checkmark.png" alt="icon" class="icon me-2" />
+                  <div>
+                    <h5 class="mb-0">Python</h5>
+                    <small>Experienced</small>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <img src="checkmark.png" alt="icon" class="icon me-2" />
+                  <div>
+                    <h5 class="mb-0">Django</h5>
+                    <small>Experienced</small>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <img src="checkmark.png" alt="icon" class="icon me-2" />
+                  <div>
+                    <h5 class="mb-0">MySQL</h5>
+                    <small>Intermediate</small>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center mb-3">
+                  <img src="checkmark.png" alt="icon" class="icon me-2" />
+                  <div>
+                    <h5 class="mb-0">REST APIs</h5>
+                    <small>Intermediate</small>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="arrow-container-2">
+        <img src="arrow.png" alt="arrow" class="arrow-icon" onclick="location.href = 'projects.html'" />
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,  // animation duration
+      once: true,      // animation happens only once
+    });
+  </script>
+<!-- Footer -->
+<footer style="background-color: #e1bee7; color: #4a235a; text-align: center; padding: 1rem 0; margin-top: 3rem;">
+  <p>&copy; 2025 Poorna Chandra M. All rights reserved.</p>
+</footer>
+</body>
+</html>

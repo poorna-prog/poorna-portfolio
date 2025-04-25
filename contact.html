@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form with Email.js</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7ecf5;
+    }
+
+    /* Nav */
+    nav, .nav-links {
+      display: flex;
+    }
+
+    nav {
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #f3e5f5;
+    }
+
+    .nav-links {
+      gap: 2rem;
+      list-style: none;
+      font-size: 1.2rem;
+    }
+
+    .nav-links a {
+      color: rgb(145, 70, 132);
+      text-decoration: none;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: rgb(211, 126, 214);
+    }
+
+    .logo:hover {
+      color: rgb(202, 153, 247);
+    }
+
+    #hamburger-nav {
+      display: none;
+    }
+
+    .hamburger-menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hamburger-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 20px;
+      width: 30px;
+      cursor: pointer;
+    }
+
+    .hamburger-icon span {
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .menu-links {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: white;
+      width: fit-content;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    .menu-links.open {
+      max-height: 300px;
+    }
+
+    .menu-links a {
+      display: block;
+      padding: 10px;
+      text-align: center;
+      color: black;
+      text-decoration: none;
+    }
+
+    .menu-links li {
+      list-style: none;
+    }
+
+    /* Responsive nav */
+    @media screen and (max-width: 768px) {
+      #desktop-nav {
+        display: none;
+      }
+
+      #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        background-color: #f3e5f5;
+      }
+    }
+
+    /* Contact form */
+    .contact-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h4 {
+      text-align: center;
+      color: #834d92;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #5e366a;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      background-color: rgb(250, 82, 214);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: plum;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-weight: bold;
+      font-family: "Merienda", cursive;
+      border-top: 2px solid #d48cd1;
+    }
+  </style>
+</head>
+<body>
+  <!-- DESKTOP NAV -->
+  <nav id="desktop-nav">
+    <div class="logo">Poorna Chandra</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav id="hamburger-nav">
+    <div class="logo">Poorna Chandra</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+        <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+        <li><a href="experience.html" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact-container">
+    <h4>Let's Connect</h4>
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © Poorna Chandra M 2025. All rights reserved.
+  </footer>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("vn1y9nvGPQa7Fn02o");
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const templateParams = {
+        user_name: document.getElementById("name").value,
+        user_email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+        time: new Date().toLocaleString()
+      };
+
+      emailjs.send("service_4yjp8ze", "template_fyn47up", templateParams)
+        .then(function () {
+          alert("Message sent successfully!");
+          document.getElementById("contactForm").reset();
+        }, function (error) {
+          console.error("FAILED...", error);
+          alert("Failed to send message. Please try again later.");
+        });
+    });
+
+    function toggleMenu() {
+      const menu = document.querySelector(".menu-links");
+      const icon = document.querySelector(".hamburger-icon");
+      menu.classList.toggle("open");
+      icon.classList.toggle("open");
+    }
+  </script>
+</body>
+</html>

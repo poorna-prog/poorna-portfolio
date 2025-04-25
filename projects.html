@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plum-Themed Projects</title>
+  <!-- Bootstrap JS (for navbar toggling) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Base Style for Projects Section */
+    .projects {
+      background-color: #f7ecf5; /* Soft plum background */
+      padding: 3rem 1rem;
+      font-family: Arial, sans-serif;
+      width: 100%; /* Ensures background covers entire width */
+    }
+
+    .section__text__p1 {
+      font-size: 1.2rem;
+      color: #834d92; /* Plum text color */
+      text-align: center;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #5e366a; /* Deep plum color */
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem; /* Adjust spacing between cards */
+    }
+
+    .card {
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(131, 77, 146, 0.3); /* Plum-themed box shadow */
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      flex: 1 1 calc(45% - 1rem); /* 2 cards per row */
+      max-width: calc(45% - 1rem); /* Ensure consistent card sizing */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      object-fit: cover;
+      width: 100%;
+      height: 200px; /* Adjust height for prominence */
+    }
+
+    .card-body {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card-body h5 {
+      font-size: 1.25rem;
+      color: #5e366a; /* Plum heading color */
+      margin-bottom: 0.5rem;
+    }
+
+    .card-body p {
+      font-size: 1rem;
+      color: #5e366a;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      margin: 0.2rem;
+    }
+
+    .btn-primary {
+      background-color: #834d92; /* Plum button color */
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background-color: #cfa2d1; /* Light plum button */
+      color: #ffffff;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+      opacity: 0.9;
+    }
+
+    .arrow-icon {
+      width: 40px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .arrow-icon:hover {
+      transform: translateY(-5px);
+    }
+
+    .arrow-container-3 {
+      position: relative;
+      margin-top: 10rem;
+      margin-left: 95%;
+    }
+
+    body {
+      margin: 0; /* Eliminates any default gaps around the body */
+      background-color: #f7ecf5; /* Makes the entire page background plum-colored */
+      scroll-behavior: smooth; /* Enable smooth scrolling */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .card img {
+        height: 150px; /* Adjust image size for smaller screens */
+      }
+
+      .card {
+        flex: 1 1 calc(100% - 1rem); /* Cards stack vertically */
+        max-width: calc(100% - 1rem); /* Full-width on small screens */
+      }
+
+      .arrow-icon {
+        width: 30px;
+      }
+    }
+
+    /* Navbar Styles */
+    nav {
+      transition: background-color 0.3s ease;
+    }
+
+    /* Navbar Background Change on Scroll */
+    nav.scrolled {
+      background-color: #7b3c95; /* Purple background on scroll */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #f3e5f5;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#" style="color: #7b3c95;">Poorna Chandra</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(50%) sepia(21%) saturate(1439%) hue-rotate(275deg);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav gap-3">
+          <a class="nav-link" href="index.html" style="color: #914684;">Home</a>
+          <a class="nav-link" href="about.html" style="color: #914684;">About</a>
+          <a class="nav-link" href="experience.html" style="color: #914684;">Experience</a>
+          <a class="nav-link" href="projects.html" style="color: #914684;">Projects</a>
+          <a class="nav-link" href="contact.html" style="color: #914684;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="google_translate_element"></div>
+
+  <section id="projects" class="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="container">
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="card">
+          <img src="projectimages.jpeg" class="card-img-top" alt="Project 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Brief description of Project 1 highlighting main objectives.</p>
+            <button type="button" class="btn btn-primary">Details</button>
+            <button type="button" class="btn btn-secondary">Edit</button>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="card">
+          <img src="projectimages.jpeg" class="card-img-top" alt="Project 2 Image">
+          <div class="card-body">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">Brief description of Project 2 highlighting main objectives.</p>
+            <button type="button" class="btn btn-primary">Details</button>
+            <button type="button" class="btn btn-secondary">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="arrow-container-3">
+      <img src="arrow.png" alt="arrow" class="arrow-icon" onclick="location.href = 'contact.html'">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #e1bee7; color: #4a235a; text-align: center; padding: 1rem 0; margin-top: 3rem;">
+    <p>&copy; 2025 Poorna Chandra M. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to add/remove the 'scrolled' class on the navbar when scrolling
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
+
